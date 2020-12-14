@@ -70,6 +70,13 @@ This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono
 python KITTI_Dataset/preprocess.py
 ```
 
+3. Execute the following command. Change `KITTIX.yaml`to KITTI00-02.yaml, KITTI03.yaml or KITTI04-12.yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change `PATH_TO_DATASET_FOLDER` to the uncompressed dataset folder. Change `SEQUENCE_NUMBER` to 00, 01, 02,.., 11. 
+```
+./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER
+```
+
+## SRN-Deblur
+
 For applying SRN-Deblur deblurring to the images, first convert the KITTI images from grayscale image format to color format:
 ```
 cd PATH_TO_KITTI_SEQUENCE
@@ -85,11 +92,6 @@ python run_model.py --input_path=PATH_TO_KITTI_SEQUENCE/image_1 --output_path=PA
 ```
 
 If you do not wish to overwrite the images, change output path to a different folder. SRN-Deblur has more options for running/training the model, such as color images.
-
-3. Execute the following command. Change `KITTIX.yaml`to KITTI00-02.yaml, KITTI03.yaml or KITTI04-12.yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change `PATH_TO_DATASET_FOLDER` to the uncompressed dataset folder. Change `SEQUENCE_NUMBER` to 00, 01, 02,.., 11. 
-```
-./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER
-```
 
 # 5. Running the devkit
 
