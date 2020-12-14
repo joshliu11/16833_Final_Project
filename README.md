@@ -69,6 +69,19 @@ This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono
 ```
 python KITTI_Dataset/preprocess.py
 ```
+For applying SRN-Deblur deblurring to the images, first convert the KITTI images from grayscale image format to color format:
+'''
+cd PATH_TO_KITTI_SEQUENCE
+python convertToRGB.py 
+'''
+clone/navigate to your SRN-Deblur repository(labeled SRN_DEBLUR_PATH), and run the following:
+'''
+git clone https://github.com/jiangsutx/SRN-Deblur
+cd SRN-Deblur
+python run_model.py --input_path=PATH_TO_KITTI_SEQUENCE/image_0 --output_path=PATH_TO_KITTI_SEQUENCE/image_0 --model=gray
+python run_model.py --input_path=PATH_TO_KITTI_SEQUENCE/image_1 --output_path=PATH_TO_KITTI_SEQUENCE/image_1 --model=gray
+'''
+If you do not wish to overwrite the images, change output path to a different folder. SRN-Deblur has more options for running/training the model, such as color images.
 
 3. Execute the following command. Change `KITTIX.yaml`to KITTI00-02.yaml, KITTI03.yaml or KITTI04-12.yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change `PATH_TO_DATASET_FOLDER` to the uncompressed dataset folder. Change `SEQUENCE_NUMBER` to 00, 01, 02,.., 11. 
 ```
