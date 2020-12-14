@@ -1,5 +1,5 @@
 # Visual SLAM in Urban Environments
-**Team Members:** Joshua Liu (jxliu), Tyler Johnson (tgj), Thomas Wang(thomasw2), Elias Lu (zixul)
+**Team Members:** Joshua Liu (jxliu), Tyler Johnson (tgj), Thomas Wang (thomasw2), Elias Lu (zixul)
 
 **Note**: We used the original ORB-SLAM2 repository as a baseline, which can be found [here](https://github.com/raulmur/ORB_SLAM2)
 
@@ -21,7 +21,9 @@ We used the ORB-SLAM2 (Stereo) method for our project:
      }
 
 # 2. Prerequisites
-The library was tested in **Ubuntu 12.04**, **14.04** and **16.04**, but it should be easy to compile in other platforms. A powerful computer (e.g. i7) will ensure real-time performance and provide more stable and accurate results.
+The library was tested by the original authors in **Ubuntu 12.04**, **14.04** and **16.04**, but it should be easy to compile in other platforms. A powerful computer (e.g. i7) will ensure real-time performance and provide more stable and accurate results.
+
+As a note, we were able to successfully run the library with **Ubuntu 20.04** and **opencv 3.0**, and **Ubuntu 18.04** and **opencv 3.2**.
 
 ## C++11 or C++0x Compiler
 We use the new thread and chrono functionalities of C++11.
