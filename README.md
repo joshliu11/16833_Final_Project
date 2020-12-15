@@ -94,7 +94,7 @@ python run_model.py --input_path=PATH_TO_KITTI_SEQUENCE/image_1 --output_path=PA
 ```
 
 If you do not wish to overwrite the images, change output path to a different folder. SRN-Deblur has more options for running/training the model, such as color images.
-
+Run the model with no gpu using --gpu=0
 # 5. Running the devkit
 
 ## KITTI development Kit
