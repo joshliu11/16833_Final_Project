@@ -101,9 +101,11 @@ If you do not wish to overwrite the images, change output path to a different fo
 
 2. Execute the following commands to run the devkit:
 ```
+cd devkit/cpp
+```
+```
 g++ -O3 -DNDEBUG -o evaluate_odometry evaluate_odometry.cpp matrix.cpp
 ```
-
 ```
 ./evaluate_odometry test_results
 ```
