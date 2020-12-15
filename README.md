@@ -99,13 +99,15 @@ If you do not wish to overwrite the images, change output path to a different fo
 
 1. The development kit can be found [here](http://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo) but we already include it in this repository.
 
-2. Execute the following commands to run the devkit:
+2. After running orbslam on a select sequence(s) copy the CameraTrajectory.txt file(s) from main folder to devkit/cpp/results/test_results/data
+
+3. Execute the following commands to run the devkit:
 ```
 cd devkit/cpp
 g++ -O3 -DNDEBUG -o evaluate_odometry evaluate_odometry.cpp matrix.cpp
 ./evaluate_odometry test_results
 ```
-
+4. Resulting average error stats, path plots, and error plots are stored in devkit/cpp/results/test_results/data and subfolders /plot_path, /plot_error
 # 6. Results
 
 ## TODO
