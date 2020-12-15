@@ -114,6 +114,19 @@ We used the translational and rotational error to evaluate the performance on th
 
 ![](./Results/baseline_results_table.png)
 
+Below we show the trajectory plots vs. ground truth (GT) for the baseline model and the histogram equalization method.
+
+<table>
+  <tr>
+    <td>ORB-SLAM2 performance vs. GT</td>
+     <td>ORB-SLAM2 using histogram equalization</td>
+  </tr>
+  <tr>
+    <td><img src="./Results/baseline_original_plot.png" width=400 height=400></td>
+    <td><img src="./Images/baseline_hist_eq_plot.png" width=400 height=400></td> 
+  </tr>
+ </table>
+
 On the artificially blurred KITTI dataset, our results can be seen in the following table.
 
 TODO
