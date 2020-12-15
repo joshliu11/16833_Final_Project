@@ -110,9 +110,9 @@ g++ -O3 -DNDEBUG -o evaluate_odometry evaluate_odometry.cpp matrix.cpp
 4. Resulting average error stats, path plots, and error plots are stored in devkit/cpp/results/test_results/data and subfolders /plot_path, /plot_error
 # 6. Results
 
-We used the translational and rotational error to evaluate the performance on the KITTI dataset. A summary of our initial results can be seen in the following table.
+We used the translational and rotational error to evaluate the performance on the KITTI dataset. A summary of our initial results can be seen in the following table. We note that the histogram equalization method reduces the rotational error when compared to the baseline ORB-SLAM2 method without any deblurring techniques applied.
 
-![](./Results/baseline_results_table.png)*Figure 1: Comparison of error metrics*
+![](./Results/baseline_results_table.png)
 
 On the artificially blurred KITTI dataset, our results can be seen in the following table.
 
