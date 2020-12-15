@@ -144,4 +144,17 @@ Below we show the trajectory plots vs. ground truth (GT) for the baseline model 
 
 On the artificially blurred KITTI dataset, our results can be seen in the following table.
 
-TODO
+![](./Results/final_table.png)
+
+Below we show the trajectory plots vs. ground truth (GT) for the blurred baseline model without any preprocessing, and the results of applying histogram equalization and a sharpening kernel.
+
+ <table>
+  <tr>
+    <td>ORB-SLAM2 blurred baseline performance</td>
+     <td>ORB-SLAM2 blurred using histogram equalization and sharpening</td>
+  </tr>
+  <tr>
+    <td><img src="./Results/06_motion_blur.png" width=400 height=175></td>
+    <td><img src="./Results/06_blur_sh.png" width=400 height=170></td> 
+  </tr>
+ </table>
