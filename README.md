@@ -110,4 +110,10 @@ g++ -O3 -DNDEBUG -o evaluate_odometry evaluate_odometry.cpp matrix.cpp
 4. Resulting average error stats, path plots, and error plots are stored in devkit/cpp/results/test_results/data and subfolders /plot_path, /plot_error
 # 6. Results
 
-## TODO
+We used the translational and rotational error to evaluate the performance on the KITTI dataset. A summary of our initial results can be seen in the following table.
+
+![](./Results/baseline_results_table.png)*Figure 1: Comparison of error metrics*
+
+On the artificially blurred KITTI dataset, our results can be seen in the following table.
+
+TODO
