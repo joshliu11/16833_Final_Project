@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import os
 import code
+import argparse
 from multiprocessing import Pool, cpu_count
 from functools import partial
 
@@ -78,30 +79,47 @@ def edge_enhance(img_path, filename):
     cv2.imwrite(img_i, edge)
 
 def main():
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("sequence_path", help="sequence folder to process")
+    parser.add_argument("filtering", help="selects filtering method: edge_enhance or sharpen")
+    args = parser.parse_args()
+    
+    sequence_path = args.sequence_path
+    filtering = args.filtering
+    
+    if filtering == "edge_enhance":
+        filter_func = edge_enhance
+    elif filtering == "sharpen":
+        filter_func = enhance_and_sharpen
+    else:
+        print("Filtering method invalid!")
+        quit()
+        
     # enable multiprocessing
     num_cpu = cpu_count()
     pool = Pool(num_cpu)
 
     # first image in stereo pair
-    img_path = ('image_1')
+    img_path = sequence_path + '/image_1'
     file_list = os.listdir(img_path)
 
     b_ov_part = partial(blur_and_overwrite, img_path)
     pool.map(b_ov_part, file_list)
 
-    ee_ov_part = partial(edge_enhance, img_path)
+    ee_ov_part = partial(filter_func, img_path)
     pool.map(ee_ov_part, file_list)
 
     print("Processing other camera images!")
 
     # second image in stereo pair
-    img_path = ('image_0')
+    img_path = sequence_path + '/image_0'
     file_list = os.listdir(img_path)
 
     b_ov_part = partial(blur_and_overwrite, img_path)
     pool.map(b_ov_part, file_list)
 
-    ee_ov_part = partial(edge_enhance, img_path)
+    ee_ov_part = partial(filter_func, img_path)
     pool.map(ee_ov_part, file_list)
     
 if __name__ == "__main__":
