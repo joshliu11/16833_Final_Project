@@ -118,12 +118,25 @@ Below we show the trajectory plots vs. ground truth (GT) for the baseline model 
 
 <table>
   <tr>
-    <td>ORB-SLAM2 performance vs. GT</td>
+    <td>ORB-SLAM2 baseline performance</td>
      <td>ORB-SLAM2 using histogram equalization</td>
   </tr>
   <tr>
     <td><img src="./Results/baseline_original_plot.png" width=400 height=400></td>
-    <td><img src="./Images/baseline_hist_eq_plot.png" width=400 height=400></td> 
+    <td><img src="./Results/baseline_hist_eq_plot.png" width=400 height=400></td> 
+  </tr>
+ </table>
+
+ For completeness, we also show the feature points obtained from the baseline and histogram equalization method for comparable image frames.
+
+ <table>
+  <tr>
+    <td>ORB-SLAM2 baseline performance</td>
+     <td>ORB-SLAM2 using histogram equalization</td>
+  </tr>
+  <tr>
+    <td><img src="./Results/baseline_original_features.png" width=400 height=175></td>
+    <td><img src="./Results/baseline_hist_eq_features.png" width=400 height=175></td> 
   </tr>
  </table>
 
