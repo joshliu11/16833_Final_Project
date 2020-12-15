@@ -67,7 +67,9 @@ This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono
 
 2. Apply preprocessing
 ```
-python KITTI_Dataset/preprocess.py
+python KITTI_Dataset/preprocess.py 'path to sequence folder' 'filtering method'
+where filtering method selects between 'sharpen' and 'edge_enhance'
+python preprocess.py -h for further help
 ```
 
 3. Execute the following command. Change `KITTIX.yaml`to KITTI00-02.yaml, KITTI03.yaml or KITTI04-12.yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change `PATH_TO_DATASET_FOLDER` to the uncompressed dataset folder. Change `SEQUENCE_NUMBER` to 00, 01, 02,.., 11. 
