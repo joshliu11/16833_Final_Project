@@ -136,7 +136,7 @@ Below we show the trajectory plots vs. ground truth (GT) for the baseline model 
   </tr>
   <tr>
     <td><img src="./Results/baseline_original_features.png" width=400 height=175></td>
-    <td><img src="./Results/baseline_hist_eq_features.png" width=400 height=175></td> 
+    <td><img src="./Results/baseline_hist_eq_features.png" width=400 height=170></td> 
   </tr>
  </table>
 
