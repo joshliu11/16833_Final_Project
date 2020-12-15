@@ -154,7 +154,7 @@ Below we show the trajectory plots vs. ground truth (GT) for the blurred baselin
      <td>ORB-SLAM2 blurred using histogram equalization and sharpening</td>
   </tr>
   <tr>
-    <td><img src="./Results/06_motion_blur.png" width=400 height=175></td>
-    <td><img src="./Results/06_blur_sh.png" width=400 height=170></td> 
+    <td><img src="./Results/06_motion_blur.png" width=400 height=400></td>
+    <td><img src="./Results/06_blur_sh.png" width=400 height=400></td> 
   </tr>
  </table>
